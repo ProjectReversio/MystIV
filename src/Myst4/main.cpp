@@ -120,6 +120,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
             thor::Application app(lpCmdLine);
             HICON icon = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_APP_ICON));
             app.SetWindowIconHandle(icon);
+            app.unknownBool = true;
             (&app)->NativeOnRun(); // This weird hack ensures that the call uses an offset and not a dllimport
         }
         CloseHandle(Mutex);

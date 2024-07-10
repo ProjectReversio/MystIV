@@ -32,5 +32,11 @@ namespace thor
 
     public:
         virtual BOOL NativeOnRun();
+
+    private:
+        char gap[40];
+
+    public:
+        bool unknownBool;
     };
 }
